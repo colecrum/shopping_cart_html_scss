@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Shopping Cart</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shopping Cart</title>
+    <style src = "style.css">
+    </style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  
+  <body>
+    <script src = "script.js">
+    </script>
+    
+  <header>
+     <nav>
+        <div class = "topnav" id = "left-nav">
+        <a href = "#groceries-section">Groceries</a>
+        <a href = "#cleaning-section">Cleaning</a>
+        <a href = "#furnishings-section">Furnishings</a>
+        <a href = "#cart-section">Cart</a>
+        <a href = "#learnMore-section">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+    <i class="fa fa-bars"></i>
+  </a>
+        </div>
+      </nav>
+    </header>
+    
+    <main>
+      
+      <div id = "groceries-section" class = "lg-section">
+        <section>
+          
+          <h1 id = "groceries-header">Groceries</h1>
+          
+          <div class = "card-row">
+          <div class = "card-col">
+            
+          <div class = "card">
+            <img src = "https://www.healthyeating.org/images/default-source/home-0.0/nutrition-topics-2.0/general-nutrition-wellness/2-2-2-3foodgroups_fruits_detailfeature_thumb.jpg?sfvrsn=7abe71fe_4" alt = "Fruits" class = "card-img">
+            <h1>Fruits</h1>
+            <p class = "price">Starting at $5.99</p>
+            <div  class = "cardDD">
+            <select name = "fruitop" id = "fruitop">
+              <option value = "$5.99 - 3 lbs">$5.99 - 3 lbs</option>
+              <option value = "$7.99 - 4 lbs">$7.99 - 4 lbs</option>
+              <option value = "$9.99 - 5 lbs">$9.99 - 5 lbs</option>
+              </select></div>
+            <p class = "card-desc">Lorem Ipsum</p>
+            <p><button onclick = "addToCart()">Add to Cart <i class="fa fa-shopping-cart"></i></button></p>
+          </div>
+            </div>
+          
+            <div class = "card-col">
+            
+          <div class = "card">
+            <img src = "https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/slideshows/powerhouse_vegetables_slideshow/650x350_powerhouse_vegetables_slideshow.jpg" alt = "Vegetables" class = "card-img">
+            <h1>Vegetables</h1>
+            <p class = "price">Starting at $5.99</p>
+            <div  class = "cardDD">
+            <select name = "vegop" id = "vegop">
+              <option value = "$5.99 - 3 lbs">$5.99 - 3 lbs</option>
+              <option value = "$7.99 - 4 lbs">$7.99 - 4 lbs</option>
+              <option value = "$9.99 - 5 lbs">$9.99 - 5 lbs</option>
+              </select></div>
+            <p class = "card-desc">Lorem Ipsum</p>
+            <p><button onclick = "addToCart()">Add to Cart <i class="fa fa-shopping-cart"></i></button></p>
+          </div>
+            </div>
+          
+            <div class = "card-col">
+            <div class = "card">
+            <img src = "https://www.citynews1130.com/wp-content/blogs.dir/sites/9/2019/06/25/iStock-1019615898.jpg" alt = "Meats" class = "card-img">
+            <h1>Meat</h1>
+            <p class = "price">Starting at $19.99</p>
+              <div  class = "cardDD">
+            <select name = "meatop" id = "meatop">
+              <option value = "$19.99 - 3 lbs">$19.99 - 3 lbs</option>
+              <option value = "$25.99 - 4 lbs">$25.99 - 4 lbs</option>
+              <option value = "$35.99 - 5 lbs">$35.99 - 5 lbs</option>
+              </select></div>
+            <p class = "card-desc">Lorem Ipsum</p>
+            <p><button onclick = "addToCart()">Add to Cart <i class="fa fa-shopping-cart"></i></button></p>
+          </div>
+        </div>
+            
+          </div>
+          
+          <div class = "card-row">
+          <div class = "card-col">
+            
+          <div class = "card">
+            <img src = "https://seattlemag.com/sites/default/files/field/image/picnic_panache.jpg" alt = "Deli" class = "card-img">
+            <h1>Deli</h1>
+            <p class = "price">Starting at $9.99</p>
+            <div  class = "cardDD">
+            <select name = "deliop" id = "deliop">
+              <option value = "$9.99 - 3 lbs">$9.99 - 3 lbs</option>
+              <option value = "$15.99 - 4 lbs">$15.99 - 4 lbs</option>
+              <option value = "$25.99 - 5 lbs">$25.99 - 5 lbs</option>
+              </select></div>
+            <p class = "card-desc">Lorem Ipsum</p>
+            <p><button onclick = "addToCart()">Add to Cart <i class="fa fa-shopping-cart"></i></button></p>
+          </div>
+            </div>
+          
+            <div class = "card-col">
+            
+          <div class = "card">
+            <img src = "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_4:3/k%2Farchive%2Fdf87781dc2802960a6d2a775db135a0cead0e657" alt = "Pantry" class = "card-img">
+            <h1>Pantry</h1>
+            <p class = "price">Starting at $9.99</p>
+            <div  class = "cardDD">
+            <select name = "pantryop" id = "pantryop">
+              <option value = "$9.99 - 2 meals">$9.99 - 2 meals</option>
+              <option value = "$15.99 - 3 meals">$15.99 - 3 meals</option>
+              <option value = "$9.99 - 5 lbs">$21.99 - 4 meals</option>
+              </select></div>
+            <p class = "card-desc">Lorem Ipsum</p>
+            <p><button onclick = "addToCart()">Add to Cart <i class="fa fa-shopping-cart"></i></button></p>
+          </div>
+            </div>
+          
+            <div class = "card-col">
+            <div class = "card">
+            <img src = "https://media4.s-nbcnews.com/i/newscms/2020_44/1627582/frozen-food-kb-main-201030_f10c9213b4920a4b293475c9cc3b5ac5.jpg" alt = "Frozen" class = "card-img">
+            <h1>Frozen</h1>
+            <p class = "price">Starting at $15.99</p>
+              <div  class = "cardDD">
+            <select name = "frozenop" id = "frozenop">
+              <option value = "$15.99 - 2 meals">$15.99 - 2 meals</option>
+              <option value = "$25.99 - 3 meals">$25.99 - 3 meals</option>
+              <option value = "$35.99 - 4 meals">$25.99 - 4 meals</option>
+              </select></div>
+            <p class = "card-desc">Lorem Ipsum</p>
+            <p><button onclick = "addToCart()">Add to Cart <i class="fa fa-shopping-cart"></i></button></p>
+          </div>
+        </div>
+            
+          </div>
+          
+        </section>
+      </div>
+      
+      <hr>
+      
+      <div id = "cleaning-section" class = "md-section">
+        <section>
+          
+          <h1 id = "Cleaning-header">Cleaning Products</h1>
+          
+          <div class = "card-row">
+          <div class = "card-col">
+            
+          <div class = "card">
+            <img src = "https://reviewed-com-res.cloudinary.com/image/fetch/s--aZ4mx2Td--/b_white,c_fill,cs_srgb,f_auto,fl_progressive.strip_profile,g_xy_center,h_668,q_auto,w_1187,x_2301,y_1292/https://reviewed-production.s3.amazonaws.com/1478026682000/Best-Detergent-TBRN-Hero.jpg" alt = "Laundry" class = "card-img">
+            <h1>Laundry</h1>
+            <p class = "price">Starting at $12.99</p>
+            <div  class = "cardDD">
+            <select name = "laundryop" id = "laundryop">
+              <option value = "$12.99 - 25 fl oz">$12.99 - 25 fl oz</option>
+              <option value = "$15.99 - 36 fl oz">$15.99 - 36 fl oz</option>
+              <option value = "$21.99 - 1 gallon">$21.99 - 1 gallon</option>
+              </select></div>
+            <p class = "card-desc">Lorem Ipsum</p>
+            <p><button onclick = "addToCart()">Add to Cart <i class="fa fa-shopping-cart"></i></button></p>
+          </div>
+            </div>
+          
+            <div class = "card-col">
+            
+          <div class = "card">
+            <img src = "https://vrmintel.com/wp-content/uploads/2019/03/shutterstock_772798855-e1551453348186.jpg" alt = "Home" class = "card-img">
+            <h1>Home</h1>
+            <p class = "price">Starting at $19.99</p>
+            <div  class = "cardDD">
+            <select name = "homeop" id = "homeop">
+              <option value = "$19.99 - 36 fl oz">$19.99 - 36 fl oz</option>
+              <option value = "$25.99 - 1 gallon">$25.99 - 1 gallon</option>
+              <option value = "$35.99 - 2 gallons">$35.99 - 2 gallons</option>
+              </select></div>
+            <p class = "card-desc">Lorem Ipsum</p>
+            <p><button onclick = "addToCart()">Add to Cart <i class="fa fa-shopping-cart"></i></button></p>
+          </div>
+            </div>
+          
+            <div class = "card-col">
+            <div class = "card">
+            <img src = "https://img-s.yoybuy.com/images/G/01/aplusautomation/vendorimages/0d093bfc-52b1-48ef-8f9b-6da97ddc2149.jpg._CB485968452_.jpg" alt = "Self" class = "card-img">
+            <h1>Self</h1>
+            <p class = "price">Starting at $15.99</p>
+              <div  class = "cardDD">
+            <select name = "selfop" id = "selfop">
+              <option value = "$15.99 - 25 fl oz">$15.99 - 25 fl oz</option>
+              <option value = "$19.99 - 36 fl oz">$19.99 - 36 fl oz</option>
+              <option value = "$29.99 - 1 gallon">$29.99 - 1 gallon</option>
+              </select></div>
+            <p class = "card-desc">Lorem Ipsum</p>
+            <p><button onclick = "addToCart()">Add to Cart <i class="fa fa-shopping-cart"></i></button></p>
+          </div>
+        </div>
+            
+          </div>
+          
+        </section>
+      </div>
+            
+      <hr>
+      
+      <div id = "furnishings-section" class = "md-section">
+        <section>
+         
+          <h1 id = "furnishings-header">Furnishings</h2>
+          
+          <div class = "card-row">
+          <div class = "card-col">
+            
+          <div class = "card">
+            <img src = "http://www.appliancesconnection.com/site-info/images/blog/2015_01_Expressionist-Collection-in-kitchen1.jpg" alt = "Small Appliances" class = "card-img">
+            <h1>Small Appliances</h1>
+            <p class = "price">Starting at $29.99</p>
+            <div  class = "cardDD">
+            <select name = "smappop" id = "smappop">
+              <option value = "$29.99 - Coffee Maker">$29.99 - Coffee Maker</option>
+              <option value = "$49.99 - Blender">$49.99 - Blender</option>
+              <option value = "$69.99 - Immersion Blender">$69.99 - Immersion Blender</option>
+              </select></div>
+            <p class = "card-desc">Lorem Ipsum</p>
+            <p><button onclick = "addToCart()">Add to Cart <i class="fa fa-shopping-cart"></i></button></p>
+          </div>
+            </div>
+          
+            <div class = "card-col">
+            
+          <div class = "card">
+            <img src = "https://miro.medium.com/max/4000/1*bJoKhT9CzCQ5a01qiC4jFQ.jpeg" alt = "Large Appliances" class = "card-img">
+            <h1>Large Appliances</h1>
+            <p class = "price">Starting at $129.99</p>
+            <div  class = "cardDD">
+            <select name = "lgappop" id = "lgappop">
+              <option value = "$129.99 - Microwave">$129.99 - Microwave</option>
+              <option value = "$299.99 - Oven Range">$299.99 - Oven Range</option>
+              <option value = "$699.99 - Refrigerator">$699.99 - Refrigerator</option>
+              </select></div>
+            <p class = "card-desc">Lorem Ipsum</p>
+            <p><button onclick = "addToCart()">Add to Cart <i class="fa fa-shopping-cart"></i></button></p>
+          </div>
+            </div>
+          
+            <div class = "card-col">
+            <div class = "card">
+            <img src = "https://www.costco.com/wcsstore/CostcoUSBCCatalogAssetStore/collections/living-austin.jpg" alt = "Furniture" class = "card-img">
+            <h1>Furniture</h1>
+            <p class = "price">Starting at $199.99</p>
+              <div  class = "cardDD">
+            <select name = "furnitureop" id = "furnitureop">
+              <option value = "$199.99 - Coffee Table">$199.99 - Coffee Table</option>
+              <option value = "$699.99 - Recliner">$699.99 - Recliner</option>
+              <option value = "$2199.99 - Sectional Couch">$2199.99 - Sectional Couch</option>
+              </select></div>
+            <p class = "card-desc">Lorem Ipsum</p>
+            <p><button onclick = "addToCart()">Add to Cart <i class="fa fa-shopping-cart"></i></button></p>
+          </div>
+        </div>
+            
+          </div>
+          
+        </section>
+      </div>
+      
+      <hr>
+
+      <div id = "cart-section" class = "md-section">
+        <section>
+         
+          <h1 id = "cart-header">Your Cart  <i class="fa fa-shopping-cart"></i></h2>
+          
+          <div class = "cart-wrap">
+          
+          <div class="row">
+  <div class="col-75">
+    <div class="cart-container">
+      <form action="/action_page.php">
+      
+        <div class="row">
+          <div class="col-50">
+            <h3>Billing Address</h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="john@example.com">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+            <label for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" id="city" name="city" placeholder="New York">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" placeholder="NY">
+              </div>
+              <div class="col-50">
+                <label for="zip">Zip</label>
+                <input type="text" id="zip" name="zip" placeholder="10001">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Payment</h3>
+            <label for="fname">Accepted Cards</label>
+            <div class="icon-container">
+              <i class="fa fa-cc-visa" style="color:navy;"></i>
+              <i class="fa fa-cc-amex" style="color:blue;"></i>
+              <i class="fa fa-cc-mastercard" style="color:red;"></i>
+              <i class="fa fa-cc-discover" style="color:orange;"></i>
+            </div>
+            <label for="cname">Name on Card</label>
+            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+            <label for="ccnum">Credit card number</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <label for="expmonth">Exp Month</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Exp Year</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2018">
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352">
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+        </label>
+        <input type="submit" value="Continue to checkout" class="cart-btn">
+      </form>
+    </div>
+  </div>
+            <div class="col-25">
+    <div class="cart-container">
+      <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
+      <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+      <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+      <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+      <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+      <hr>
+      <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+    </div>
+  </div>
+          </div>
+          </div>
+        </section>
+      </div>
+      
+      <hr>
+      
+      <div id = "learnMore-section" class = "md-section">
+        <section>
+          
+          <h1 id = "form-header">Need Additional Assistance?</h1>
+          <p id = "form-sub">Fill out the form below and one of our experienced representatives will contact you shortly.</p>
+          
+          <div class = "form-cont">
+          <form id = "learnMore-form" action = "">
+            <label for = "fname">First Name</label><br>
+            <input type = "text" id = "fname" name = "fname" required><br>
+            <label for = "lname">Last Name</label><br>
+            <input type = "text" id = "lname" name = "lname" required><br>
+            <label for = "pphone">Primary Phone</label><br>
+            <input type = "tel" id = "pphone" name = "pphone" required><br>
+            <label for = "aphone">Alternate Phone</label><br>
+            <input type = "tel" id = "aphone" name = "aphone"><br>
+            <label for = "email">Email</label><br>
+            <input type = "text" id = "email" name = "email" required><br>
+            <label for = "selectserv">Reason for your inquiry</label><br>
+            <select id = "selectserv" name = "selectserv" required>
+              <option value = "Lorem">Lorem</option>
+              <option value = "Ipsum">Ipsum</option>
+              <option value = "Dolor">Dolor</option>
+              <option value = "Magna">Magna</option>
+              <option value = "Eget">Eget</option>
+              <option value = "Minim">Minim</option>
+            </select>
+            <label for = "tellus">Tell us a little more about your inquiry</label><br>
+            <textarea id = "tellus" name = "tellus" placeholder = "I can't find a product I'm looking for." style = "height: 200px"></textarea>
+            <br>
+            <input type = "submit" value = "Submit" class = "form-but">
+          </form>
+          </div>
+          
+        </section>
+      </div>
+    
+    
+    </main>
+    
+  <br>
+  <br>
+  <hr>
+  <div id = "contact-section">
+      <section id = "contact" class = "container">
+        <h2 id = "contact-title">Designed & Coded by Cole Crum</h2>
+     <div class="contact-links">
+      <div class = "link-cont" id = "git-cont">
+       <a id = "profile-link" href = "https://github.com/colecrum?tab=repositories" target="_blank" class="btn contact-details"><img id = "git-logo" class = "contact-img" src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHXk1n8mQe3sbaaMDgiqtSeSC8QySxLfgkaA&usqp=CAU" title = "GitHub"></a></div>
+       <div class = "link-cont" id= "pen-cont">
+    <a href="https://codepen.io/colecrum" target="_blank" class="btn contact-details"><img class="contact-img" src = "https://blog.codepen.io/wp-content/uploads/2012/06/Button-Black-Large.png" title = "CodePen" </a></div>
+         <div class = "link-cont" id = "mail-cont">
+    <a href="mailto:colemcrum@gmail.com" target="_blank" class="btn contact-details"><img class="contact-img" src = "https://lh3.googleusercontent.com/VS3B_qhOFTYsdyNfnlr98zg3HNjB_Gcs9bxVnaQO9MysAoBOXMHATClhRviImKKJV8RV-0s7hl8KeVQcij5Iagb1exHzt40x679l8Q=w0" title = "Email"></a></div>
+         <div class = "link-cont" id = "phone-cont">
+    <a href="tel:512-517-8503" target="_blank" class="btn contact-details"><img class="contact-img" src = "https://cdn4.iconfinder.com/data/icons/phones-colored/48/JD-32-512.png" title = "Phone"></a></div>
+  </div>       
+        </div>
+      </section>
+    </div>
+    
+    
+  </body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
