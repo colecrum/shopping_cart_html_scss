@@ -99,7 +99,7 @@ hr {
     margin: auto;
     height: auto;
     width: 100%;
-    padding-top: none;
+    padding-top: 75px;
     min-height: none;
   }
 }
@@ -132,6 +132,12 @@ h3 {
 
 h4 {
   font-size: 24px;
+}
+
+@media screen and (max-width: 600px) {
+  .section-header {
+    text-decoration: underline;
+  }
 }
 
 /* Product cards -------------------*/
@@ -193,7 +199,11 @@ h4 {
   -moz-text-align-last: center;
 }
 
-
+@media screen and (max-width: 600px) {
+  .card-col {
+  width: 100%;
+}
+}
 
 /* Groceries Section ------------------------------------*/
 
@@ -350,7 +360,11 @@ input[type=text], input[type=tel], select, textarea {
   background-color: #4CAF50;
 }
 
-
+@media screen and (max-width: 600px) {
+  .form-cont {
+  width: 85%;
+}
+}
 
 /* SIGN-OFF --------------------------------------------*/
 
@@ -385,4 +399,10 @@ input[type=text], input[type=tel], select, textarea {
 
 @media only screen and (max-width: 600px) {
   .contact-links {width: 100%;}
+}
+
+@media screen and (max-width: 600px) {
+  #contact-title {
+    font-size: 24px;
+  }
 }
